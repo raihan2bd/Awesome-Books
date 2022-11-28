@@ -5,10 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>Awesome Book</title>
+  <title>Awesome Books</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <header>
+    <h1>Awesome Books</h1>
+  </header>
+  <main>
+    <section class="books-section">
+      <ul class="books-list">
+      </ul>
+    </section>
+    <section class="add-book-section">
+      <form id="add-book">
+        <fieldset class="add-book-field">
+          <div class="input-group">
+            <input type="text" name="title" id="title"/>
+          </div>
+          <div class="input-group">
+            <input type="text" name="author" id="author"/>
+          </div>
+          <button type="submit">Add</button>
+          <div class="error"></div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
   <script src="./js/app.js"></script>
 </body>
 </html>

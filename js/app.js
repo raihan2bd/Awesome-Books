@@ -1,17 +1,4 @@
-// Book constructor will create a single book.
-class Book {
-  constructor(title, author) {
-    this.id = this.generateId();
-    this.title = title;
-    this.author = author;
-  }
-
-  // This generateId function will return unique id for book
-  generateId () {
-    return Date.now().toString(36) + Math.random().toString(36).substring(2);
-  };
-}
-
+import Book from './book.js';
 // Books constructor will manage books.
 class ManageBooks {
   constructor() {
@@ -21,33 +8,34 @@ class ManageBooks {
       this.books = [];
     }
   }
+
   // Add book in Books constructor
-  add (title, author) {
+  add(title, author) {
     const book = new Book(title, author);
     this.books.push(book);
     this.save();
     this.display();
-  };
+  }
 
   // Save books data in localStorage
-  save () {
+  save() {
     if (this.books.length > 0) {
       localStorage.setItem('books', JSON.stringify(this.books));
     } else {
       localStorage.removeItem('books');
     }
-  };
+  }
 
   // Delete book form the books
-  delete (e) {
+  delete(e) {
     const { id } = e.target;
     this.books = this.books.filter((book) => id !== book.id);
     this.save();
     this.display();
-  };
+  }
 
   // Display books
-  display () {
+  display() {
     const bookList = document.querySelector('.books-list');
     if (this.books.length > 0) {
       bookList.innerText = '';
@@ -74,10 +62,10 @@ class ManageBooks {
     } else {
       bookList.innerText = 'Currently book list is empty';
     }
-  };
+  }
 
   // Control form submition
-  onAddBook (e) {
+  onAddBook(e) {
     e.preventDefault();
     const title = document.getElementById('title');
     const author = document.getElementById('author');
@@ -90,7 +78,7 @@ class ManageBooks {
       title.value = '';
       author.value = '';
     }
-  };
+  }
 }
 
 // Initialize the ManageBooks constructor

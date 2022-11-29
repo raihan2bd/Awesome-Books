@@ -80,6 +80,19 @@ body {
   align-items: center;
 }
 
+.date-now {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#show-date {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #757575;
+}
+
 .books-section {
   width: 100%;
   max-width: 800px;

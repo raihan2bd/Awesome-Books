@@ -7,6 +7,9 @@ const bookSection = document.querySelector('.books-section');
 const addBookSection = document.querySelector('.add-book-section');
 const contractSection = document.querySelector('.contact-section');
 
+// show Date in html
+document.getElementById('show-date').innerText = new Date();
+
 // Books constructor will manage books.
 class ManageBooks {
   constructor() {

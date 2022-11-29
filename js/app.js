@@ -1,4 +1,15 @@
 import Book from './book.js';
+
+// Select some dom element
+// Add event on the header nav-item
+const navItems = document.querySelectorAll('.nav-item');
+const bookSection = document.querySelector('.books-section');
+const addBookSection = document.querySelector('.add-book-section');
+const contractSection = document.querySelector('.contact-section');
+
+// show Date in html
+document.getElementById('show-date').innerText = new Date();
+
 // Books constructor will manage books.
 class ManageBooks {
   constructor() {
@@ -77,6 +88,9 @@ class ManageBooks {
       this.add(title.value, author.value);
       title.value = '';
       author.value = '';
+      bookSection.classList.add('slide-in');
+      addBookSection.classList.remove('slide-in');
+      contractSection.classList.remove('slide-in');
     }
   }
 }
@@ -93,4 +107,32 @@ window.onload = () => {
 const addBookForm = document.getElementById('add-book');
 addBookForm.addEventListener('submit', (e) => {
   books.onAddBook(e);
+});
+
+// This function is use for the single page
+const addNavSection = (e) => {
+  const { id } = e.target;
+  e.target.classList.add('active');
+  if (id === 'books') {
+    bookSection.classList.add('slide-in');
+    addBookSection.classList.remove('slide-in');
+    contractSection.classList.remove('slide-in');
+  } else if (id === 'add-new-book') {
+    bookSection.classList.remove('slide-in');
+    addBookSection.classList.add('slide-in');
+    contractSection.classList.remove('slide-in');
+  } else if (id === 'contact-us') {
+    bookSection.classList.remove('slide-in');
+    addBookSection.classList.remove('slide-in');
+    contractSection.classList.add('slide-in');
+  }
+};
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener('click', (e) => {
+    navItems.forEach((n) => {
+      n.classList.remove('active');
+    });
+    addNavSection(e);
+  });
 });

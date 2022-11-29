@@ -8,13 +8,23 @@
   <title>Awesome Books</title>
 </head>
 <body>
-  <main>
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand"><a class="brand-logo" href="">Awesome Books</a></div>
+      <ul class="nav-item-group">
+        <li id="books" class="nav-item">Book List</li>
+        <li id="add-new-book" class="nav-item active">Add Book</li>
+        <li id="contact-us" class="nav-item">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
     <section class="books-section">
       <h1 class="section-title">All awesome books</h1>
       <ul class="books-list">
       </ul>
     </section>
-    <section class="add-book-section">
+    <section class="add-book-section slide-in">
       <h2 class="section-title">Add a new book</h2>
       <form id="add-book">
         <fieldset class="add-book-field">
@@ -29,7 +39,19 @@
         </fieldset>
       </form>
     </section>
+    <section class="contact-section">
+      <h2 class="section-title">Contact us</h2>
+      <p class="contact-details">Do you have any question or you want to say "Hello" you can Reach out to us!</p>
+      <ul class="contact-item-group">
+        <li class="contact-item">Our e-mail: <address>example@mail.com</address></li>
+        <li class="contact-item">Our phone: <address>555-555-5555-55</address></li>
+        <li class="contact-item">Our address: <address>221B Baker Street is the London</address></li>
+      </ul>
+    </section>
   </main>
+  <footer class="footer">
+    <h5>©2022 Awesome book list, Inc. All Rights Reserved.</h5>
+  </footer>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>

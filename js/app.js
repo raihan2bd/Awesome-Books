@@ -1,11 +1,11 @@
 import Book from './book.js';
 
 // Select some dom element
-  // Add event on the header nav-item
-  const navItems = document.querySelectorAll('.nav-item');
-  const bookSection = document.querySelector('.books-section');
-  const addBookSection = document.querySelector('.add-book-section');
-  const contractSection = document.querySelector('.contact-section');
+// Add event on the header nav-item
+const navItems = document.querySelectorAll('.nav-item');
+const bookSection = document.querySelector('.books-section');
+const addBookSection = document.querySelector('.add-book-section');
+const contractSection = document.querySelector('.contact-section');
 
 // Books constructor will manage books.
 class ManageBooks {
@@ -87,7 +87,7 @@ class ManageBooks {
       author.value = '';
       bookSection.classList.add('slide-in');
       addBookSection.classList.remove('slide-in');
-      contractSection.classList.remove('slide-in')
+      contractSection.classList.remove('slide-in');
     }
   }
 }
@@ -108,9 +108,9 @@ addBookForm.addEventListener('submit', (e) => {
 
 // This function is use for the single page
 const addNavSection = (e) => {
-  const {id} = e.target;
+  const { id } = e.target;
   e.target.classList.add('active');
-  if(id === 'books') {
+  if (id === 'books') {
     bookSection.classList.add('slide-in');
     addBookSection.classList.remove('slide-in');
     contractSection.classList.remove('slide-in');
@@ -118,18 +118,18 @@ const addNavSection = (e) => {
     bookSection.classList.remove('slide-in');
     addBookSection.classList.add('slide-in');
     contractSection.classList.remove('slide-in');
-  } else if(id === 'contact-us') {
+  } else if (id === 'contact-us') {
     bookSection.classList.remove('slide-in');
     addBookSection.classList.remove('slide-in');
     contractSection.classList.add('slide-in');
   }
-}
+};
 
 navItems.forEach((navItem) => {
   navItem.addEventListener('click', (e) => {
     navItems.forEach((n) => {
-      n.classList.remove('active')
+      n.classList.remove('active');
     });
     addNavSection(e);
   });
-})
+});

@@ -126,9 +126,9 @@ npm install
 
 👤 **Ellon Mordecai**
 
-- GitHub: [@githubhandle](https://github.com/EllonMordecai)
-- Twitter: [@twitterhandle](https://twitter.com/EllonMordecai)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/EllonMordecai)
+- GitHub: [@githubhandle](https://github.com/Ellon-M)
+- Twitter: [@twitterhandle](https://twitter.com/ellonm4)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ellon-m)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

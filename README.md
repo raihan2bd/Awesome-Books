@@ -68,7 +68,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > ## Our project demo picture
->![Capture](https://user-images.githubusercontent.com/35267447/204282829-5e786edc-a172-46f1-aee8-078039334582.PNG)
+> <img align="center" src="project_demo.PNG" alt="logo" width="100%"  height="auto" />
+  <br/>
 
 - [Live Demo Link](https://raihan2bd.github.io/Awesome-Books/)
 

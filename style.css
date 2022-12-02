@@ -127,10 +127,21 @@ body {
   padding: 15px;
   align-items: center;
   justify-content: space-between;
+  color: #757575;
 }
 
 .book-item:nth-child(even) {
   background: #ddd;
+}
+
+.book-name {
+  color: #333;
+  font-weight: bold;
+}
+
+.book-author {
+  color: #333;
+  font-size: 14px;
 }
 
 .btn-remove {

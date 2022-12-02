@@ -54,7 +54,7 @@ class ManageBooks {
       this.books.forEach((book) => {
         // Single book item
         const li = document.createElement('li');
-        li.innerText = `${book.title} by ${book.author}`;
+        li.innerHTML = `<h4><span class="book-name">${book.title}</span> by <span class="book-author">${book.author}</span></h4>`;
         li.className = 'book-item';
 
         // Remove button
@@ -91,6 +91,8 @@ class ManageBooks {
       bookSection.classList.add('slide-in');
       addBookSection.classList.remove('slide-in');
       contractSection.classList.remove('slide-in');
+      document.getElementById('add-new-book').classList.remove('active');
+      document.getElementById('books').classList.add('active');
     }
   }
 }
